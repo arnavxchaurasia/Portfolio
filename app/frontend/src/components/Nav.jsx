@@ -59,7 +59,9 @@ export const Nav = ({ onNavigate }) => {
         </nav>
 
         <div className="flex items-center gap-4">
-          <MusicOrb on={musicOn} onClick={handleToggleMusic} />
+          <span className="hidden md:block">
+            <MusicOrb on={musicOn} onClick={handleToggleMusic} />
+          </span>
           <Magnetic className="hidden md:block">
             <button
               onClick={() => go("#contact")}
@@ -89,6 +91,10 @@ export const Nav = ({ onNavigate }) => {
                   {l.label}
                 </button>
               ))}
+              <button onClick={handleToggleMusic} className="flex items-center gap-3 pt-2 border-t border-white/10 w-fit" data-testid="nav-mobile-music">
+                <MusicOrb on={musicOn} onClick={handleToggleMusic} />
+                <span className="font-mono text-xs uppercase tracking-[0.2em] text-dim">{musicOn ? "Pause Music" : "Play Music"}</span>
+              </button>
             </div>
           </motion.nav>
         )}
