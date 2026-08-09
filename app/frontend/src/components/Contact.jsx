@@ -10,18 +10,18 @@ import { playSuccess, playError } from "../lib/fx";
 
 const ResumeModal = ({ url, onClose }) => (
   <motion.div
-    className="fixed inset-0 z-[200] grid place-items-center bg-void/90 backdrop-blur-sm p-6"
+    className="fixed inset-0 z-[200] flex items-center justify-center bg-void/90 backdrop-blur-sm p-0 sm:p-6"
     initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
     onClick={onClose}
     data-testid="resume-modal"
   >
     <motion.div
-      className="relative w-full max-w-3xl h-[85vh] bg-surface border border-white/15 rounded-lg overflow-hidden"
+      className="relative flex flex-col w-full h-full sm:max-w-3xl sm:h-[85vh] bg-surface border-0 sm:border sm:border-white/15 sm:rounded-lg overflow-hidden"
       initial={{ opacity: 0, y: 20, scale: 0.98 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: 20, scale: 0.98 }}
       transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
       onClick={(e) => e.stopPropagation()}
     >
-      <div className="flex items-center justify-between px-5 py-3 border-b border-white/10">
+      <div className="flex-shrink-0 flex items-center justify-between px-5 py-3 border-b border-white/10">
         <span className="font-mono text-xs uppercase tracking-[0.2em] text-dim">Résumé</span>
         <div className="flex items-center gap-4">
           <a href={url} target="_blank" rel="noreferrer" className="flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.2em] text-dim hover:text-neon transition-colors" data-testid="resume-open-tab">
@@ -32,7 +32,9 @@ const ResumeModal = ({ url, onClose }) => (
           </button>
         </div>
       </div>
-      <iframe src={url} title="Résumé" className="w-full h-[calc(100%-45px)] bg-white" />
+      <div className="flex-1 overflow-auto -webkit-overflow-scrolling-touch">
+        <iframe src={url} title="Résumé" className="w-full h-full min-h-[600px] bg-white" />
+      </div>
     </motion.div>
   </motion.div>
 );
