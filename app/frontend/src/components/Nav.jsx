@@ -91,10 +91,10 @@ export const Nav = ({ onNavigate }) => {
                   {l.label}
                 </button>
               ))}
-              <button onClick={handleToggleMusic} className="flex items-center gap-3 pt-2 border-t border-white/10 w-fit" data-testid="nav-mobile-music">
+              <div className="flex items-center gap-3 pt-2 border-t border-white/10">
                 <MusicOrb on={musicOn} onClick={handleToggleMusic} />
                 <span className="font-mono text-xs uppercase tracking-[0.2em] text-dim">{musicOn ? "Pause Music" : "Play Music"}</span>
-              </button>
+              </div>
             </div>
           </motion.nav>
         )}

@@ -74,9 +74,11 @@ const Site = () => {
     };
     const cleanup = () => {
       window.removeEventListener("pointerdown", resume);
+      window.removeEventListener("touchstart", resume);
       window.removeEventListener("keydown", resume);
     };
     window.addEventListener("pointerdown", resume);
+    window.addEventListener("touchstart", resume, { passive: true });
     window.addEventListener("keydown", resume);
     return cleanup;
   }, []);
