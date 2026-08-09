@@ -1,0 +1,139 @@
+{
+  "project_name": "Awwwards-Level Developer Portfolio",
+  "theme": "dark",
+  "persona_and_vibe": {
+    "concept": "Fusion of Brutalist Tech and Immersive Gradient/3D",
+    "description": "A high-end, studio-grade portfolio for a 4th-year SWE specializing in AI/ML, AWS, and Web Dev. It combines the raw, stark, asymmetrical nature of Brutalism (stark black/white, raw grids, oversized typography) with the depth of Immersive 3D (deep space navy, glassmorphism, animated aurora blurs).",
+    "emotion": "Commanding, futuristic, highly technical yet intensely creative."
+  },
+  "colors": {
+    "base": {
+      "background_void": "#030303",
+      "surface_navy": "#0A0B10",
+      "glass_panel": "rgba(10, 11, 16, 0.6)"
+    },
+    "accent": {
+      "neon_lime": "#CCFF00",
+      "pure_white": "#FFFFFF",
+      "muted_grey": "#8A8D98",
+      "border_dim": "rgba(255, 255, 255, 0.1)"
+    },
+    "aurora_glows": {
+      "magenta": "#3B0918",
+      "cyan": "#0A2540",
+      "deep_green": "#092E20"
+    },
+    "rules": [
+      "NO full-screen flat gradients. Use Aurora colors as massive, heavily blurred (blur-[120px]) absolute divs behind the main content to create a deep space nebula effect.",
+      "Neon Lime is for strict interaction points ONLY (hover states, primary CTAs, active states, custom cursor dot). Do not overuse it."
+    ]
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Cabinet Grotesk",
+      "body": "Satoshi",
+      "accent": "JetBrains Mono"
+    },
+    "scales": {
+      "h1_hero": "text-5xl sm:text-7xl md:text-8xl tracking-tighter uppercase font-black leading-none",
+      "h2_section": "text-4xl sm:text-5xl md:text-6xl tracking-tight uppercase font-bold",
+      "h3_card": "text-2xl sm:text-3xl tracking-tight font-bold",
+      "body_base": "text-base md:text-lg leading-relaxed text-muted_grey font-light",
+      "overline_mono": "text-xs tracking-[0.2em] uppercase font-mono text-neon_lime"
+    },
+    "rules": [
+      "Headings must NEVER be centered by default. Prioritize asymmetrical left or right optical alignment.",
+      "Use 'Cabinet Grotesk' for high impact. Use 'JetBrains Mono' for numbers, dates, tech stacks, and labels.",
+      "Line height for headings must be tight (leading-none)."
+    ]
+  },
+  "spacing_and_layout": {
+    "philosophy": "Generous Spacing + Asymmetry",
+    "container_padding": "px-6 md:px-12 py-24 md:py-32",
+    "grid_system": "Bento 'Tetris' Grid Protocol. grid-cols-1 md:grid-cols-12 gap-8. Mix tall, wide, and square spans to create visual tension.",
+    "surface_styles": {
+      "glassmorphism": "Used for sticky nav and floating overlay cards. backdrop-blur-2xl bg-[#0A0B10]/60 border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.5)]",
+      "brutalist_card": "Used for Skills/Projects. bg-transparent border border-white/20 hover:border-[#CCFF00] transition-colors duration-300"
+    }
+  },
+  "motion_and_interaction": {
+    "scroll": "MANDATORY: Lenis for smooth momentum scrolling. It gives the site the weight and premium feel required for an Awwwards level site.",
+    "cursor": "Custom magnetic cursor using framer-motion. A small neon-lime dot that expands and applies mix-blend-mode: difference when hovering over text or images.",
+    "hero_reveal": "Masked line-by-line text reveal on load. Wrap each word/line in an overflow-hidden div and translate Y from 100% to 0% using framer-motion staggerChildren.",
+    "hover_effects": "Magnetic buttons. Image clipping masks that slightly scale up (scale-105) inside an overflow-hidden container on hover.",
+    "marquee": "Slow editorial marquee for the tech stack using outline text (text-transparent stroke-white) or tiny mono text spaced generously (gap-24)."
+  },
+  "sections_blueprint": {
+    "hero": {
+      "vibe": "Kinetic & Immersive",
+      "details": "Massive Cabinet Grotesk typography, masked line-by-line reveal. Deep space aurora blurs slowly shifting in the background. Sticky glassmorphism header with a 'Let's Talk' magnetic button."
+    },
+    "about": {
+      "vibe": "Editorial Brutalism",
+      "details": "Numbered manifesto chapters. Massive index numbers ('01', '02') in JetBrains Mono overlapping the body text. Left-aligned stark typography."
+    },
+    "skills": {
+      "vibe": "Raw Grid / Bento",
+      "details": "Asymmetrical Bento grid with 1px border. Use the 'Tracing Beam' or subtle neon-lime glow on hover to highlight AI/ML, AWS, K8S, Java expertise."
+    },
+    "projects": {
+      "vibe": "Spotlight / Cinematic",
+      "details": "Large images inside clipped frames. Real imagery treated with a subtle grayscale filter that turns full color on hover. Parallax scroll effect inside the image container."
+    },
+    "experience": {
+      "vibe": "Technical Flow",
+      "details": "Vertical timeline. A single 1px neon-lime line connecting nodes. Dates in JetBrains Mono. Hovering a node highlights the connecting line."
+    },
+    "blog": {
+      "vibe": "Minimalist Utility",
+      "details": "Simple brutalist list format with bottom borders. Hovering over a row reveals a floating image tied to the custom cursor."
+    },
+    "contact": {
+      "vibe": "Terminal meets High-end Studio",
+      "details": "Shadcn based working form. Strip standard UI look. Inputs should be brutalist (transparent bg, bottom 1px border only). Massive neon-lime submit button. Resume download link nearby."
+    }
+  },
+  "components_styling": {
+    "button": "Pill-shaped for main CTAs, raw sharp rectangles for technical interactions. bg-[#CCFF00] text-black font-bold uppercase tracking-widest hover:scale-105 transition-transform",
+    "form_inputs": "Use Shadcn/UI but override classes: bg-transparent border-0 border-b border-white/20 rounded-none focus-visible:ring-0 focus-visible:border-[#CCFF00]",
+    "nav": "fixed top-0 w-full z-50 backdrop-blur-xl bg-[#0A0B10]/60 border-b border-white/10"
+  },
+  "image_urls": [
+    {
+      "category": "about_manifesto",
+      "url": "https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMGRldmVsb3BlciUyMHBvcnRyYWl0JTIwZGFya3xlbnwwfHx8fDE3ODYwMTE1MTB8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Moody creative developer portrait in dark environment, perfect for the About manifesto section to establish a studio-grade persona."
+    },
+    {
+      "category": "projects_ai_ml",
+      "url": "https://images.unsplash.com/photo-1549317336-206569e8475c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDZ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGFpJTIwZGF0YSUyMHZpc3VhbGl6YXRpb24lMjBuZW9ufGVufDB8fHx8MTc4NjAxMTUxMHww&ixlib=rb-4.1.0&q=85",
+      "description": "Neon abstract data visualization to represent AI/ML projects and deep learning architecture."
+    }
+  ],
+  "accessibility_and_testing": {
+    "contrast": "Ensure pure black and neon lime meet WCAG standards. Add text-shadow for text overlaid on aurora gradients.",
+    "testing": "CRITICAL: All interactive and key informational elements MUST include a data-testid attribute (e.g., data-testid='contact-submit-button', data-testid='nav-about-link')."
+  },
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "You MUST NOT apply universal transition (transition: all). Use specific transitions (e.g., transition-transform, transition-colors).",
+    "Create depth through layered design elements with z-index hierarchy and glassmorphism.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap. Use py-24 or py-32 for section padding.",
+    "Implement micro-animations on every interaction (hover states, scroll reveals). Static = dead.",
+    "Use Phosphor Icons (duotone or regular) for sharp, premium UI elements.",
+    "Do NOT use transparent backgrounds for the sticky header; always use backdrop-blur + semi-transparent dark bg (e.g., bg-black/60).",
+    "NEVER use generic placeholder texts or dummy images where real visual storytelling is required.",
+    "CRITICAL: Do NOT output TypeScript (.tsx) files. Generate standard React JavaScript (.js / .jsx) files.",
+    "Use sonner for toast notifications.",
+    "Do NOT center align layouts universally. Asymmetry creates tension, and tension creates interest."
+  ],
+  "instructions_to_main_agent": [
+    "1. Setup standard React project with Tailwind. Do NOT use TypeScript.",
+    "2. Install required dependencies: framer-motion, lenis (or @studio-freight/react-lenis), @phosphor-icons/react, lucide-react, clsx, tailwind-merge, sonner.",
+    "3. Configure Tailwind with custom fonts: 'Cabinet Grotesk' for display, 'Satoshi' for body, 'JetBrains Mono' for mono. Extend theme colors as defined in the guidelines.",
+    "4. Create a global Layout wrapper that initializes Lenis smooth scrolling and renders the custom Framer Motion cursor.",
+    "5. Build the Hero section with absolute blurred Aurora gradient divs in the background, and staggerChildren Framer Motion variants for the massive text reveal.",
+    "6. Assemble the Bento Grid for Skills using exact grid spans to ensure asymmetry.",
+    "7. Implement Shadcn-based contact form, override classes to brutalist style, and ensure working frontend state with Sonner toasts.",
+    "8. Apply data-testid to every single interactive element."
+  ]
+}
